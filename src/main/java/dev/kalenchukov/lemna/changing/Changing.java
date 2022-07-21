@@ -42,13 +42,19 @@ public class Changing implements Changeable
 	 * Локализованные тексты логирования.
 	 */
 	@NotNull
-	private ResourceBundle localeLogs = ResourceBundle.getBundle("localizations/logs", locale);
+	private ResourceBundle localeLogs = ResourceBundle.getBundle(
+		"lemna/changing/localizations/logs",
+		this.locale
+	);
 
 	/**
 	 * Локализованные тексты исключений.
 	 */
 	@NotNull
-	private ResourceBundle localeExceptions = ResourceBundle.getBundle("localizations/exceptions", locale);
+	private ResourceBundle localeExceptions = ResourceBundle.getBundle(
+		"lemna/changing/localizations/exceptions",
+		this.locale
+	);
 
 	/**
 	 * Конструктор для {@code Changing}.
@@ -73,8 +79,15 @@ public class Changing implements Changeable
 		{
 			this.locale = locale;
 
-			localeLogs = ResourceBundle.getBundle("localizations/logs", this.locale);
-			localeExceptions = ResourceBundle.getBundle("localizations/exceptions", this.locale);
+			localeLogs = ResourceBundle.getBundle(
+				"lemna/changing/localizations/logs",
+				this.locale
+			);
+
+			localeExceptions = ResourceBundle.getBundle(
+				"lemna/changing/localizations/exceptions",
+				this.locale
+			);
 		}
 	}
 
