@@ -1,7 +1,11 @@
-# Lemna Changing
+# LemnaChanging
+
 Изменение значений полей класса.
 
-### Создание изменяющего класса
+## Использование
+
+#### Создание изменяющего класса
+
 Для создания изменяющего класса, необходимо создать класс реализующий интерфейс "Modificatory".
 
 ```java
@@ -13,7 +17,8 @@ public final class CommentModifier implements Modificatory<String>
 	@Override
 	public String modify(@Nullable String value)
 	{
-		if (value == null) {
+		if (value == null)
+		{
 			return null;
 		}
 
@@ -22,11 +27,13 @@ public final class CommentModifier implements Modificatory<String>
 }
 ```
 
-### Изменение значений полей класса
+#### Изменение значений полей класса
+
 Чтобы задать изменяющего для поля, необходимо добавить аннотацию "@Changer".
 Данная аннотация содержит параметр для указания изменяющего класса.
 
 Класс, в котором необходимо изменить значение поля:
+
 ```java
 import dev.kalenchukov.lemna.changing.annotations.Changer;
 
@@ -43,6 +50,7 @@ public class Experimental
 ```
 
 Вызов изменяющего:
+
 ```java
 Experimental experimental = new Experimental();
 
@@ -50,6 +58,25 @@ Changeable changing = new Changing(experimental);
 changing.change();
 
 experimental.getComment();
-/*
-Результат выполнения: МОЙ КОММЕНТАРИЙ
-*/
+// Результат выполнения: МОЙ КОММЕНТАРИЙ
+```
+
+## Установка
+
+Для установки этого проекта, введите в терминале:
+
+```bash
+git clone https://github.com/kalenchukov/LemnaChanging.git
+```
+
+## Версии
+
+Доступные [версии](https://github.com/kalenchukov/LemnaChanging/releases).
+
+## Авторы
+
+[Алексей Каленчуков](https://github.com/kalenchukov)
+
+## Лицензия
+
+[MIT](https://opensource.org/licenses/MIT)
