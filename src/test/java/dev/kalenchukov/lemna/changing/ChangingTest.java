@@ -33,7 +33,7 @@ public final class ChangingTest
      * Проверка изменения значений нескольких полей класса.
      */
     @Test
-    public void testChange1()
+    public void testChangingSeveralFields()
     {
         class Experimental
         {
@@ -67,7 +67,7 @@ public final class ChangingTest
 	 * Проверка изменения значения с помощью нескольких изменяющих.
 	 */
 	@Test
-	public void testChange2()
+	public void testChangingSeveralModifier()
 	{
 		class Experimental
 		{
@@ -92,10 +92,10 @@ public final class ChangingTest
 	}
 
 	/**
-	 * Проверка изменения значения на значение {@code null}.
+	 * Проверка изменения значения на {@code null}.
 	 */
 	@Test
-	public void testChange3()
+	public void testChangingValueToNull()
 	{
 		class Experimental
 		{
