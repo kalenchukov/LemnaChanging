@@ -9,7 +9,7 @@
 Для создания изменяющего класса, необходимо создать класс реализующий интерфейс "Modificatory".
 
 ```java
-import Changing;
+import dev.kalenchukov.lemna.changing.annotations.Changing;
 
 public final class CommentModifier implements Modificatory<String>
 {
@@ -52,6 +52,9 @@ public class Experimental
 Вызов изменяющего:
 
 ```java
+import dev.kalenchukov.lemna.changing.Changing;
+import dev.kalenchukov.lemna.changing.Changeable;
+
 Experimental experimental = new Experimental();
 
 Changeable changing = new Changing(experimental);
