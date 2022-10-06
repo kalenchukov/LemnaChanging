@@ -18,6 +18,7 @@
 
 package dev.kalenchukov.lemna.changing;
 
+import dev.kalenchukov.lemna.changing.annotations.Changer;
 import dev.kalenchukov.lemna.changing.exceptions.InvalidModifyingClassException;
 import dev.kalenchukov.lemna.changing.interfaces.Modificatory;
 import org.apache.log4j.Logger;
@@ -36,7 +37,7 @@ public class Changing implements Changeable
 	 * Локализация.
 	 */
 	@NotNull
-	private Locale locale = new Locale("ru", "RU");
+	private Locale locale;
 
 	/**
 	 * Объект класса в котором необходимо изменить значения полей.
@@ -45,28 +46,22 @@ public class Changing implements Changeable
 	private final Object object;
 
 	/**
-	 * Логгер для данного класса.
-	 */
-	@NotNull
-	private static final Logger LOG = Logger.getLogger(Changing.class);
-
-	/**
 	 * Локализованные тексты логирования.
 	 */
 	@NotNull
-	private ResourceBundle localeLogs = ResourceBundle.getBundle(
-		"lemna/changing/localizations/logs",
-		this.locale
-	);
+	private ResourceBundle localeLogs;
 
 	/**
 	 * Локализованные тексты исключений.
 	 */
 	@NotNull
-	private ResourceBundle localeExceptions = ResourceBundle.getBundle(
-		"lemna/changing/localizations/exceptions",
-		this.locale
-	);
+	private ResourceBundle localeExceptions;
+
+	/**
+	 * Логгер для данного класса.
+	 */
+	@NotNull
+	private static final Logger LOG = Logger.getLogger(Changing.class);
 
 	/**
 	 * Конструктор для {@code Changing}.
@@ -78,6 +73,15 @@ public class Changing implements Changeable
 		Objects.requireNonNull(object);
 
 		this.object = object;
+		this.locale = new Locale("ru", "RU");
+		this.localeLogs = ResourceBundle.getBundle(
+			"lemna/changing/localizations/logs",
+			this.locale
+		);
+		this.localeExceptions = ResourceBundle.getBundle(
+			"lemna/changing/localizations/exceptions",
+			this.locale
+		);
 	}
 
 	/**
@@ -115,8 +119,7 @@ public class Changing implements Changeable
 
 		for (Field field : this.object.getClass().getDeclaredFields())
 		{
-			dev.kalenchukov.lemna.changing.annotations.Changer[] annotationsChanger = field.getAnnotationsByType(
-				dev.kalenchukov.lemna.changing.annotations.Changer.class);
+			Changer[] annotationsChanger = field.getAnnotationsByType(Changer.class);
 
 			if (annotationsChanger.length == 0) {
 				continue;
@@ -143,13 +146,13 @@ public class Changing implements Changeable
 	 *
 	 * @throws InvalidModifyingClassException Если изменяющий некорректный.
 	 */
-	private void changeValueField(@NotNull final Field field, @NotNull dev.kalenchukov.lemna.changing.annotations.Changer @NotNull [] annotationsChanger)
+	private void changeValueField(@NotNull final Field field, @NotNull Changer @NotNull [] annotationsChanger)
 		throws InvalidModifyingClassException
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(annotationsChanger);
 
-		for (dev.kalenchukov.lemna.changing.annotations.Changer annotationChanger : annotationsChanger)
+		for (Changer annotationChanger : annotationsChanger)
 		{
 			Class<? extends Modificatory<?>> changer = annotationChanger.modifier();
 
