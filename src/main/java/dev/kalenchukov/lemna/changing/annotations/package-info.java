@@ -16,4 +16,7 @@
  * limitations under the License.
  */
 
+/**
+ * Предоставляет аннотации, необходимые для задания действий над значениями полей классов.
+ */
 package dev.kalenchukov.lemna.changing.annotations;

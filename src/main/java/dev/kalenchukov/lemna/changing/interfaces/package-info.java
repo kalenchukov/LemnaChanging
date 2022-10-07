@@ -16,4 +16,7 @@
  * limitations under the License.
  */
 
+/**
+ * Предоставляет интерфейсы, необходимые для реализации классов на их основе.
+ */
 package dev.kalenchukov.lemna.changing.interfaces;

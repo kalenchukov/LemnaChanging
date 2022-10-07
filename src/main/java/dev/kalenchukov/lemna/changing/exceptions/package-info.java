@@ -16,4 +16,7 @@
  * limitations under the License.
  */
 
+/**
+ * Предоставляет классы, необходимые для конкретизации исключений.
+ */
 package dev.kalenchukov.lemna.changing.exceptions;
