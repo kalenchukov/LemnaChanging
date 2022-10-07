@@ -49,8 +49,11 @@ public @interface Changer
 	@interface ManyChanger
 	{
 		/**
-		 * @see Changer
+		 * Задаёт множество {@code Changer}.
+		 *
+		 * @return Массив из {@code Changer}.
 		 */
-		Changer[] value();
+		@NotNull
+		Changer @NotNull [] value();
 	}
 }
