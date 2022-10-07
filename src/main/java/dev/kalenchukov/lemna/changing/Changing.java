@@ -29,7 +29,7 @@ import java.lang.reflect.Method;
 import java.util.*;
 
 /**
- * Класс для изменения значений полей класса.
+ * Класс изменяющего значения полей класса.
  */
 public class Changing implements Changeable
 {
