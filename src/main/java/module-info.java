@@ -1,3 +1,6 @@
+/**
+ * Определяет API для изменения значений полей классов.
+ */
 module dev.kalenchukov.lemna.changing
 {
 	requires org.jetbrains.annotations;
