@@ -26,6 +26,7 @@ import java.lang.annotation.*;
 /**
  * Позволяет изменять значение поля класса.
  */
+@Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
 @Repeatable(Changer.ManyChanger.class)
@@ -44,6 +45,7 @@ public @interface Changer
 	 *
 	 * @see Changer
 	 */
+	@Documented
 	@Retention(RetentionPolicy.RUNTIME)
 	@Target(ElementType.FIELD)
 	@interface ManyChanger
