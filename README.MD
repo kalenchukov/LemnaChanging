@@ -64,14 +64,6 @@ experimental.getComment();
 // Результат выполнения: МОЙ КОММЕНТАРИЙ
 ```
 
-## Установка
-
-Для установки этого проекта, введите в терминале:
-
-```bash
-git clone https://github.com/kalenchukov/LemnaChanging.git
-```
-
 ## Версии
 
 Доступные [версии](https://github.com/kalenchukov/LemnaChanging/releases).
