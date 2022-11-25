@@ -76,10 +76,6 @@ git clone https://github.com/kalenchukov/LemnaChanging.git
 
 Доступные [версии](https://github.com/kalenchukov/LemnaChanging/releases).
 
-## Авторы
-
-[Алексей Каленчуков](https://github.com/kalenchukov)
-
 ## Лицензия
 
 [Apache License 2.0](https://opensource.org/licenses/Apache-2.0)
