@@ -75,11 +75,11 @@ public class Changing implements Changeable
 		this.object = object;
 		this.locale = new Locale("ru", "RU");
 		this.localeLogs = ResourceBundle.getBundle(
-			"lemna/changing/localizations/logs",
+			"/lemna/changing/localizations/logs",
 			this.locale
 		);
 		this.localeExceptions = ResourceBundle.getBundle(
-			"lemna/changing/localizations/exceptions",
+			"/lemna/changing/localizations/exceptions",
 			this.locale
 		);
 	}
@@ -96,12 +96,12 @@ public class Changing implements Changeable
 			this.locale = locale;
 
 			localeLogs = ResourceBundle.getBundle(
-				"lemna/changing/localizations/logs",
+				"/lemna/changing/localizations/logs",
 				this.locale
 			);
 
 			localeExceptions = ResourceBundle.getBundle(
-				"lemna/changing/localizations/exceptions",
+				"/lemna/changing/localizations/exceptions",
 				this.locale
 			);
 		}
