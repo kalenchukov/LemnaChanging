@@ -30,8 +30,8 @@ public interface Modificatory<T>
 	/**
 	 * Изменяет значение поля.
 	 *
-	 * @param value Значение поля, которое необходимо изменить.
-	 * @return Возвращает изменённое значение поля.
+	 * @param value значение поля, которое необходимо изменить.
+	 * @return возвращает изменённое значение поля.
 	 */
 	@Nullable
 	T modify(@Nullable T value);

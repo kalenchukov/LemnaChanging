@@ -30,7 +30,7 @@ public class InvalidModifyingClassException extends RuntimeException
     /**
      * Конструктор для {@code InvalidChangerException}.
      *
-     * @param message Сообщение.
+     * @param message сообщение.
      */
     public InvalidModifyingClassException(@NotNull final String message)
     {

@@ -31,14 +31,14 @@ public interface Changeable
 	/**
 	 * Устанавливает локализацию.
 	 *
-	 * @param locale Локализация.
+	 * @param locale локализация.
 	 */
 	void setLocale(@NotNull Locale locale);
 
 	/**
 	 * Изменяет значение поля.
 	 *
-	 * @throws InvalidModifyingClassException Если изменяющий класс некорректный.
+	 * @throws InvalidModifyingClassException если изменяющий класс некорректный.
 	 */
 	void change() throws InvalidModifyingClassException;
 }

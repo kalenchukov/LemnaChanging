@@ -66,7 +66,7 @@ public class Changing implements Changeable
 	/**
 	 * Конструктор для {@code Changing}.
 	 *
-	 * @param object Объект класса в котором необходимо изменить значения полей.
+	 * @param object объект класса в котором необходимо изменить значения полей.
 	 */
 	public Changing(@NotNull final Object object)
 	{
@@ -75,11 +75,11 @@ public class Changing implements Changeable
 		this.object = object;
 		this.locale = new Locale("ru", "RU");
 		this.localeLogs = ResourceBundle.getBundle(
-			"/lemna/changing/localizations/logs",
+			"lemna/changing/localizations/logs",
 			this.locale
 		);
 		this.localeExceptions = ResourceBundle.getBundle(
-			"/lemna/changing/localizations/exceptions",
+			"lemna/changing/localizations/exceptions",
 			this.locale
 		);
 	}
@@ -96,12 +96,12 @@ public class Changing implements Changeable
 			this.locale = locale;
 
 			localeLogs = ResourceBundle.getBundle(
-				"/lemna/changing/localizations/logs",
+				"lemna/changing/localizations/logs",
 				this.locale
 			);
 
 			localeExceptions = ResourceBundle.getBundle(
-				"/lemna/changing/localizations/exceptions",
+				"lemna/changing/localizations/exceptions",
 				this.locale
 			);
 		}
@@ -141,10 +141,10 @@ public class Changing implements Changeable
 	/**
 	 * Изменяет значение поля класса.
 	 *
-	 * @param field Поле класса в котором необходимо изменить значение.
-	 * @param annotationsChanger Аннотации {@code Changer} применяемые к полю класса.
+	 * @param field поле класса в котором необходимо изменить значение.
+	 * @param annotationsChanger аннотации {@code Changer} применяемые к полю класса.
 	 *
-	 * @throws InvalidModifyingClassException Если изменяющий некорректный.
+	 * @throws InvalidModifyingClassException если изменяющий некорректный.
 	 */
 	private void changeValueField(@NotNull final Field field, @NotNull Changer @NotNull [] annotationsChanger)
 		throws InvalidModifyingClassException

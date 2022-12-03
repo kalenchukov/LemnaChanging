@@ -35,7 +35,7 @@ public @interface Changer
 	/**
 	 * Задаёт класс изменяющего значение поля.
 	 *
-	 * @return Класс изменяющего значение поля.
+	 * @return класс изменяющего значение поля.
 	 */
 	@NotNull
 	Class<? extends Modificatory<?>> modifier();
@@ -53,7 +53,7 @@ public @interface Changer
 		/**
 		 * Задаёт множество {@code Changer}.
 		 *
-		 * @return Массив из {@code Changer}.
+		 * @return массив из {@code Changer}.
 		 */
 		@NotNull
 		Changer @NotNull [] value();
