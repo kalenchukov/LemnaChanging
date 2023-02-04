@@ -29,7 +29,6 @@ public final class CommentModifier implements Modificatory<String>
 Данная аннотация содержит параметр для указания изменяющего класса.
 
 Класс, в котором необходимо изменить значение поля:
-
 ```java
 import dev.kalenchukov.lemna.changing.annotations.Changer;
 
@@ -46,7 +45,6 @@ public class Experimental
 ```
 
 Вызов изменяющего:
-
 ```java
 import dev.kalenchukov.lemna.changing.Changing;
 import dev.kalenchukov.lemna.changing.Changeable;
@@ -57,5 +55,9 @@ Changeable changing = new Changing(experimental);
 changing.change();
 
 experimental.getComment();
-// Результат выполнения: МОЙ КОММЕНТАРИЙ
+```
+
+Результат выполнения:
+```
+МОЙ КОММЕНТАРИЙ
 ```
