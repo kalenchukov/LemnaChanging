@@ -23,9 +23,9 @@ import dev.kalenchukov.lemna.changing.supports.CommentModifier;
 import dev.kalenchukov.lemna.changing.supports.CommentNullModifier;
 import dev.kalenchukov.lemna.changing.supports.PriceModifier;
 import dev.kalenchukov.lemna.changing.supports.QuoteModifier;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public final class ChangingTest
 {
