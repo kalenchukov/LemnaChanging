@@ -27,11 +27,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link Changing}.
+ */
 public final class ChangingTest
 {
-    /**
-     * Проверка изменения значений нескольких полей класса.
-     */
+	/**
+	 * Проверка метода {@link Changing#change()} с несколькими полями.
+	 */
     @Test
     public void testChangingSeveralFields()
     {
@@ -64,7 +67,7 @@ public final class ChangingTest
     }
 
 	/**
-	 * Проверка изменения значения с помощью нескольких изменяющих.
+	 * Проверка метода {@link Changing#change()} с несколькими изменяющими.
 	 */
 	@Test
 	public void testChangingSeveralModifier()
@@ -92,7 +95,7 @@ public final class ChangingTest
 	}
 
 	/**
-	 * Проверка изменения значения на {@code null}.
+	 * Проверка метода {@link Changing#change()} с изменением на значение {@code null}.
 	 */
 	@Test
 	public void testChangingValueToNull()
