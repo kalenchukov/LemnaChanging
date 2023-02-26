@@ -85,9 +85,12 @@ public class Changing implements Changeable
 	}
 
 	/**
-	 * @see Changing#setLocale(Locale)
+	 * {@inheritDoc}
+	 *
+	 * @param locale {@inheritDoc}
 	 */
-	public void setLocale(@NotNull Locale locale)
+	@Override
+	public void setLocale(@NotNull final Locale locale)
 	{
 		Objects.requireNonNull(locale);
 
@@ -108,8 +111,9 @@ public class Changing implements Changeable
 	}
 
 	/**
-	 * @see Changing#change()
+	 * {@inheritDoc}
 	 */
+	@Override
 	public void change() throws InvalidModifyingClassException
 	{
 		LOG.debug(String.format(
@@ -143,7 +147,6 @@ public class Changing implements Changeable
 	 *
 	 * @param field поле класса в котором необходимо изменить значение.
 	 * @param annotationsChanger аннотации {@code Changer} применяемые к полю класса.
-	 *
 	 * @throws InvalidModifyingClassException если изменяющий некорректный.
 	 */
 	private void changeValueField(@NotNull final Field field, @NotNull Changer @NotNull [] annotationsChanger)

@@ -33,7 +33,7 @@ public interface Changeable
 	 *
 	 * @param locale локализация.
 	 */
-	void setLocale(@NotNull Locale locale);
+	void setLocale(@NotNull final Locale locale);
 
 	/**
 	 * Изменяет значение поля.
