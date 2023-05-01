@@ -24,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
  * Интерфейс для реализации собственного класса изменяющего значение поля.
  *
  * @param <T> Объект типа значения поля.
+ * @author Aleksey Kalenchukov
  */
 public interface Modificatory<T>
 {
