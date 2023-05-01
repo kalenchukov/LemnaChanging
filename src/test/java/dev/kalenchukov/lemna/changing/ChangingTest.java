@@ -29,6 +29,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link Changing}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class ChangingTest
 {
