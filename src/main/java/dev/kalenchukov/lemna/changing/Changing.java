@@ -31,7 +31,7 @@ import java.util.*;
 /**
  * Класс изменяющего значения полей класса.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class Changing implements Changeable
 {

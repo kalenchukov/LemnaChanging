@@ -26,7 +26,7 @@ import java.lang.annotation.*;
 /**
  * Позволяет изменять значение поля класса.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
@@ -45,7 +45,7 @@ public @interface Changer
 	/**
 	 * Множество аннотаций {@code Changer}.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	@Documented
 	@Retention(RetentionPolicy.RUNTIME)

@@ -25,7 +25,7 @@ import java.util.Objects;
 /**
  * Исключение для некорректного изменяющего значение поля.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class InvalidModifyingClassException extends RuntimeException
 {

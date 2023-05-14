@@ -26,7 +26,7 @@ import java.util.Locale;
 /**
  * Интерфейс для реализации изменяющего значения полей.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface Changeable
 {
