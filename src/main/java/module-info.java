@@ -4,7 +4,7 @@
 module dev.kalenchukov.lemna.changing
 {
 	requires org.jetbrains.annotations;
-	requires log4j;
+	requires org.apache.logging.log4j;
 
 	exports dev.kalenchukov.lemna.changing;
 	exports dev.kalenchukov.lemna.changing.exceptions;

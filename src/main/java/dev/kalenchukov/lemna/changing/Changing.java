@@ -21,7 +21,8 @@ package dev.kalenchukov.lemna.changing;
 import dev.kalenchukov.lemna.changing.annotations.Changer;
 import dev.kalenchukov.lemna.changing.exceptions.InvalidModifyingClassException;
 import dev.kalenchukov.lemna.changing.interfaces.Modificatory;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Field;
@@ -63,7 +64,7 @@ public class Changing implements Changeable
 	 * Логгер для данного класса.
 	 */
 	@NotNull
-	private static final Logger LOG = Logger.getLogger(Changing.class);
+	private static final Logger LOG = LogManager.getLogger(Changing.class);
 
 	/**
 	 * Конструктор для {@code Changing}.
