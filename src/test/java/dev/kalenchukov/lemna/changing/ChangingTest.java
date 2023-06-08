@@ -38,7 +38,7 @@ public final class ChangingTest
 	 * Проверка метода {@link Changing#change()} с несколькими полями.
 	 */
     @Test
-    public void testChangingSeveralFields()
+    public void changingSeveralFields()
     {
         class Experimental
         {
@@ -72,7 +72,7 @@ public final class ChangingTest
 	 * Проверка метода {@link Changing#change()} с несколькими изменяющими.
 	 */
 	@Test
-	public void testChangingSeveralModifier()
+	public void changingSeveralModifier()
 	{
 		class Experimental
 		{
@@ -100,7 +100,7 @@ public final class ChangingTest
 	 * Проверка метода {@link Changing#change()} с изменением на значение {@code null}.
 	 */
 	@Test
-	public void testChangingValueToNull()
+	public void changingValueToNull()
 	{
 		class Experimental
 		{
