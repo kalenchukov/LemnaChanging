@@ -93,7 +93,9 @@ public final class ChangingTest
 		Changeable fieldValueChanger = new Changing(experimental);
 		fieldValueChanger.change();
 
-		assertEquals("'МОЙ КОММЕНТАРИЙ к классу 'Experimental''", experimental.getComment());
+		String actual = experimental.getComment();
+
+		assertEquals("'МОЙ КОММЕНТАРИЙ к классу 'Experimental''", actual);
 	}
 
 	/**
@@ -118,6 +120,8 @@ public final class ChangingTest
 		Changeable fieldValueChanger = new Changing(experimental);
 		fieldValueChanger.change();
 
-		assertNull(experimental.getComment());
+		String actual = experimental.getComment();
+
+		assertNull(actual);
 	}
 }
