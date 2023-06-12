@@ -64,8 +64,11 @@ public final class ChangingTest
         Changeable fieldValueChanger = new Changing(experimental);
 		fieldValueChanger.change();
 
-        assertEquals("МОЙ КОММЕНТАРИЙ к классу 'Experimental'", experimental.getComment());
-		assertEquals(Double.valueOf(33.95), experimental.getPrice());
+		String actualComment = experimental.getComment();
+		Double actualPrice = experimental.getPrice();
+
+        assertEquals("МОЙ КОММЕНТАРИЙ к классу 'Experimental'", actualComment);
+		assertEquals(Double.valueOf(33.95), actualPrice);
     }
 
 	/**
@@ -93,9 +96,9 @@ public final class ChangingTest
 		Changeable fieldValueChanger = new Changing(experimental);
 		fieldValueChanger.change();
 
-		String actual = experimental.getComment();
+		String actualComment = experimental.getComment();
 
-		assertEquals("'МОЙ КОММЕНТАРИЙ к классу 'Experimental''", actual);
+		assertEquals("'МОЙ КОММЕНТАРИЙ к классу 'Experimental''", actualComment);
 	}
 
 	/**
@@ -120,8 +123,8 @@ public final class ChangingTest
 		Changeable fieldValueChanger = new Changing(experimental);
 		fieldValueChanger.change();
 
-		String actual = experimental.getComment();
+		String actualComment = experimental.getComment();
 
-		assertNull(actual);
+		assertNull(actualComment);
 	}
 }
