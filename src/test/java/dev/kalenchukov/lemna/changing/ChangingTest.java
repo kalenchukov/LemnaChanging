@@ -25,7 +25,7 @@ import dev.kalenchukov.lemna.changing.supports.PriceModifier;
 import dev.kalenchukov.lemna.changing.supports.QuoteModifier;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link Changing}.
@@ -65,10 +65,10 @@ public final class ChangingTest
 		fieldValueChanger.change();
 
 		String actualComment = experimental.getComment();
-		Double actualPrice = experimental.getPrice();
+		double actualPrice = experimental.getPrice();
 
-        assertEquals("МОЙ КОММЕНТАРИЙ к классу 'Experimental'", actualComment);
-		assertEquals(Double.valueOf(33.95), actualPrice);
+        assertThat(actualComment).isEqualTo("МОЙ КОММЕНТАРИЙ к классу 'Experimental'");
+		assertThat(actualPrice).isEqualTo(Double.valueOf(33.95));
     }
 
 	/**
@@ -98,7 +98,7 @@ public final class ChangingTest
 
 		String actualComment = experimental.getComment();
 
-		assertEquals("'МОЙ КОММЕНТАРИЙ к классу 'Experimental''", actualComment);
+		assertThat(actualComment).isEqualTo("'МОЙ КОММЕНТАРИЙ к классу 'Experimental''");
 	}
 
 	/**
@@ -125,6 +125,6 @@ public final class ChangingTest
 
 		String actualComment = experimental.getComment();
 
-		assertNull(actualComment);
+		assertThat(actualComment).isNull();
 	}
 }
