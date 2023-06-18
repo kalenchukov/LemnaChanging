@@ -115,6 +115,8 @@ public class Changing implements Changeable
 
 	/**
 	 * {@inheritDoc}
+	 *
+	 * @throws InvalidModifyingClassException {@inheritDoc}
 	 */
 	@Override
 	public void change() throws InvalidModifyingClassException
@@ -150,7 +152,7 @@ public class Changing implements Changeable
 	 *
 	 * @param field поле класса в котором необходимо изменить значение.
 	 * @param annotationsChanger аннотации {@code Changer} применяемые к полю класса.
-	 * @throws InvalidModifyingClassException если изменяющий некорректный.
+	 * @throws InvalidModifyingClassException если изменяющий класс некорректный.
 	 */
 	private void changeValueField(@NotNull final Field field, @NotNull Changer @NotNull [] annotationsChanger)
 		throws InvalidModifyingClassException
