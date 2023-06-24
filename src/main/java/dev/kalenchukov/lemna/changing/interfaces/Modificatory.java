@@ -23,10 +23,10 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Интерфейс для реализации собственного класса изменяющего значение поля.
  *
- * @param <T> Объект типа значения поля.
+ * @param <V> тип значения поля.
  * @author Алексей Каленчуков
  */
-public interface Modificatory<T>
+public interface Modificatory<V>
 {
 	/**
 	 * Изменяет значение поля.
@@ -35,5 +35,5 @@ public interface Modificatory<T>
 	 * @return возвращает изменённое значение поля.
 	 */
 	@Nullable
-	T modify(@Nullable T value);
+	V modify(@Nullable V value);
 }
