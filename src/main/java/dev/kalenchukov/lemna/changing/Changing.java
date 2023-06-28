@@ -70,6 +70,7 @@ public class Changing implements Changeable
 	 * Конструктор для {@code Changing}.
 	 *
 	 * @param object объект класса в котором необходимо изменить значения полей.
+	 * @throws NullPointerException если в качестве {@code object} передан {@code null}.
 	 */
 	public Changing(@NotNull final Object object)
 	{
@@ -91,6 +92,7 @@ public class Changing implements Changeable
 	 * {@inheritDoc}
 	 *
 	 * @param locale {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code locale} передан {@code null}.
 	 */
 	@Override
 	public void setLocale(@NotNull final Locale locale)
@@ -152,6 +154,8 @@ public class Changing implements Changeable
 	 *
 	 * @param field поле класса в котором необходимо изменить значение.
 	 * @param annotationsChanger аннотации {@code Changer} применяемые к полю класса.
+	 * @throws NullPointerException если в качестве {@code field} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code annotationsChanger} передан {@code null}.
 	 * @throws InvalidModifyingClassException если изменяющий класс некорректный.
 	 */
 	private void changeValueField(@NotNull final Field field, @NotNull Changer @NotNull [] annotationsChanger)
