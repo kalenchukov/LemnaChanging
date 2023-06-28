@@ -18,9 +18,7 @@
 
 package dev.kalenchukov.lemna.changing.exceptions;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Objects;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Исключение для некорректного изменяющего значение поля.
@@ -34,8 +32,8 @@ public class InvalidModifyingClassException extends RuntimeException
      *
      * @param message сообщение.
      */
-    public InvalidModifyingClassException(@NotNull final String message)
+    public InvalidModifyingClassException(@Nullable final String message)
     {
-        super(Objects.requireNonNull(message));
+        super(message);
     }
 }
