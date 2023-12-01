@@ -27,13 +27,13 @@ import org.jetbrains.annotations.Nullable;
  */
 public class InvalidModifyingClassException extends RuntimeException
 {
-    /**
-     * Конструктор для {@code InvalidChangerException}.
-     *
-     * @param message сообщение.
-     */
-    public InvalidModifyingClassException(@Nullable final String message)
-    {
-        super(message);
-    }
+	/**
+	 * Конструктор для {@code InvalidChangerException}.
+	 *
+	 * @param message сообщение.
+	 */
+	public InvalidModifyingClassException(@Nullable final String message)
+	{
+		super(message);
+	}
 }

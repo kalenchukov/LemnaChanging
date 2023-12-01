@@ -37,13 +37,13 @@ public final class ChangingTest
 	/**
 	 * Проверка метода {@link Changing#change()} с несколькими полями.
 	 */
-    @Test
-    public void changingSeveralFields()
-    {
-        class Experimental
-        {
+	@Test
+	public void changeWithSeveralFields()
+	{
+		class Experimental
+		{
 			@Changer(modifier = CommentModifier.class)
-            private String comment = "Мой комментарий";
+			private String comment = "Мой комментарий";
 
 			@Changer(modifier = PriceModifier.class)
 			private Double price = 20.05;
@@ -59,23 +59,23 @@ public final class ChangingTest
 			}
 		}
 
-        Experimental experimental = new Experimental();
+		Experimental experimental = new Experimental();
 
-        Changeable fieldValueChanger = new Changing(experimental);
+		Changeable fieldValueChanger = new Changing(experimental);
 		fieldValueChanger.change();
 
 		String actualComment = experimental.getComment();
 		double actualPrice = experimental.getPrice();
 
-        assertThat(actualComment).isEqualTo("МОЙ КОММЕНТАРИЙ к классу 'Experimental'");
+		assertThat(actualComment).isEqualTo("МОЙ КОММЕНТАРИЙ к классу 'Experimental'");
 		assertThat(actualPrice).isEqualTo(Double.valueOf(33.95));
-    }
+	}
 
 	/**
 	 * Проверка метода {@link Changing#change()} с несколькими изменяющими.
 	 */
 	@Test
-	public void changingSeveralModifier()
+	public void changeWithSeveralModifier()
 	{
 		class Experimental
 		{
@@ -105,7 +105,7 @@ public final class ChangingTest
 	 * Проверка метода {@link Changing#change()} с изменением на значение {@code null}.
 	 */
 	@Test
-	public void changingValueToNull()
+	public void changeWithValueToNull()
 	{
 		class Experimental
 		{
